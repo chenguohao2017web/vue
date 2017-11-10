@@ -5,11 +5,11 @@ import App from './App'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 
-import FindMusic from './components/findMusic'
-import MyMusic from './components/myMusic'
-import Friend from './components/friend'
-import User from './components/user'
-
+// import FindMusic from './components/findMusic'
+// import MyMusic from './components/myMusic'
+// import Friend from './components/friend'
+// import User from './components/user'
+import router from './routers.js'
 Vue.config.productionTip = false
 Vue.use(VueRouter)
 Vue.use(VueResource)
@@ -23,25 +23,25 @@ Vue.use(VueResource)
 //如果想处理不同的数据更新，就要在created里使用nextTick（）函数
 //watch 针对某一个数据发生变化时 只作用在data数据
 
-const router = new VueRouter({
-    mode: 'history',
-    routes: [
-        { path: '/', redirect: '/findMusic' },
-        {
-            path: "/myMusic",
-            component: MyMusic
-        }, {
-            path: "/friend",
-            component: Friend
-        }, {
-            path: "/user",
-            component: User
-        }, {
-            path: "/findMusic",
-            component: FindMusic
-        }
-    ]
-})
+// const router = new VueRouter({
+//     mode: 'history',
+//     routes: [
+//         { path: '/', redirect: '/findMusic' },
+//         {
+//             path: "/myMusic",
+//             component: MyMusic
+//         }, {
+//             path: "/friend",
+//             component: Friend
+//         }, {
+//             path: "/user",
+//             component: User
+//         }, {
+//             path: "/findMusic",
+//             component: FindMusic
+//         }
+//     ]
+// })
 
 new Vue({
     router,
